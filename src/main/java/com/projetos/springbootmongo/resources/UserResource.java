@@ -17,8 +17,8 @@ public class UserResource {
 
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<User>> findAll() {
-		User fred = new User("1", "Fred", "fredabreu@gmail.com");
-		User lud = new User("2", "Lud", "fredabreu@gmail.com");
+		User fred = new User(1L, "Fred", "fredabreu@gmail.com", "61998039666", "12345");
+		User lud = new User(2L, "Lud", "lud@gmail.com", "61998039666", "12345");
 		List<User> list = new ArrayList<>();
 		list.addAll(Arrays.asList(fred, lud));
 		return ResponseEntity.ok().body(list);
